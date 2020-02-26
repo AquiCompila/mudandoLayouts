@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mudando layouts de grid para lista com Tailwind e ES6</title>
+
+    <!-- import tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .card img {
+            min-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto px-4">
+
+        <!-- botão para alternar layout -->
+        <div class="flex justify-center my-8">
+            <button onclick="switchLayout()" class="bg-blue-500 text-white px-4 rounded-full">
+                Alternar Layout
+            </button>
+        </div>
+
+        <!-- alinha cards na horizontal -->
+        <div class="flex justify-between flex-wrap">
+
+            <!-- cards -->
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+            <div class="card max-w-xs mt-4 bg-white shadow">
+                <div>
+                    <img src="https://picsum.photos/320/200" alt="img">
+                </div>
+                <div class="p-3">
+                    <h2 class="font-bold uppercase">Integer in ante luctus</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus risus quis est rutrum
+                        lobortis. Curabitur ornare enim neque, eget laoreet elit mattis non. Morbi gravida nec libero in
+                        vestibulum. Maecenas vel vestibulum nulla, quis lobortis tortor. Aenean et vestibulum purus. Nam
+                        malesuada ultricies
+                        est non bibendum.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const switchLayout = () => {
+            // seleciona todos os elementos com a classe card
+            const cards = document.querySelectorAll('.card')
+
+            // alterna a aplicação das classes
+            cards.forEach((card) => {
+                card.classList.toggle('max-w-full')
+                card.classList.toggle('flex')
+            })
+        }
+    </script>
+
+</html>
